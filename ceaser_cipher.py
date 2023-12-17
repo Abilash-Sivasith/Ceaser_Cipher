@@ -5,36 +5,26 @@ by Abilash Sivasith
 
 """
 
-ALPABET_MAPPING = {
-    'a': 0,
-    'b': 1,
-    'c': 2,
-    'd': 3,
-    'e': 4,
-    'f': 5,
-    'g': 6,
-    'h': 7,
-    'i': 8,
-    'j': 9,
-    'k': 10,
-    'l': 11,
-    'm': 12,
-    'n': 13,
-    'o': 14,
-    'p': 15,
-    'q': 16,
-    'r': 17,
-    's': 18,
-    't': 19,
-    'u': 20,
-    'v': 21,
-    'w': 22,
-    'x': 23,
-    'y': 24,
-    'z': 25
-}
+ALPHABET =  ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
 
-def ceaser_cipher(plaintext, shift):
+def ceaser_cipher_encryption(plaintext, shift):
     """encrypts provided sentance"""
-    pass
+    encrypted_sentance = ''
+    individual_words = plaintext.split(' ')
+    word_to_encrpyt_list = []
+    blank_space = ' '
+    for letters in plaintext:
+        if plaintext != blank_space:
+            index_of_letter = ALPHABET.index(letters)
+            encrypted_index_of_letter = (index_of_letter + shift) % 26 
+            letter_of_enctypted_value = ALPHABET[encrypted_index_of_letter]
+            encrypted_sentance += str(letter_of_enctypted_value) +  ' '
+    return encrypted_sentance
+
+# TESTING - ceaser_cipher_encryption function
+
+# text_to_encrypt = 'ABCD'
+# encrypted_code = ceaser_cipher_encryption(text_to_encrypt, 2)
+# print(encrypted_code)
+
 
