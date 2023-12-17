@@ -10,8 +10,6 @@ ALPHABET =  ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N
 def ceaser_cipher_encryption(plaintext, shift):
     """encrypts provided sentance"""
     encrypted_sentance = ''
-    individual_words = plaintext.split(' ')
-    word_to_encrpyt_list = []
     blank_space = ' '
     for letters in plaintext:
         if plaintext != blank_space:
