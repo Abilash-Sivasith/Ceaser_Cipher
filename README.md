@@ -1,5 +1,8 @@
 # Ceaser_Cipher
 
 This Repo Includes
-- Ceaser cipher in python
-- Ceaser cipher in JavaScript
+- Written In Python
+  - Ceaser Cipher Encrpyter
+  - Ceaser Cipher Decrypter
+  - Random shift guesser to decrypt ceaser cipher
+  
